@@ -176,6 +176,7 @@ header.top.frost{padding:18px 20px 20px}
 @media (max-width:720px){header.top.frost{padding:14px}#left.frost{padding:12px}}
 
 /* day tabs with weather */
+.where{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
 .controls{flex-direction:column;align-items:stretch}
 .controls .filters{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
 .days{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
@@ -236,12 +237,12 @@ header.top.frost{padding:18px 20px 20px}
     <div class="days" id="days" role="tablist" aria-label="Дни и погода"></div>
     <div class="filters">
     <div class="chips" id="chips" aria-label="Рубрики"></div>
-    <label class="ctl-label" for="f-in">Где</label>
+    <span class="where"><label class="ctl-label" for="f-in">Где</label>
     <select id="f-in">
       <option value="any">в помещении и на улице</option>
       <option value="in">только в помещении</option>
       <option value="out">только на улице</option>
-    </select>
+    </select></span>
     <label class="chip" for="f-blog" style="--c:var(--flax)"><input type="checkbox" id="f-blog" style="margin:0;accent-color:var(--flax)"> только из ваших скринов</label>
     </div>
   </div>
